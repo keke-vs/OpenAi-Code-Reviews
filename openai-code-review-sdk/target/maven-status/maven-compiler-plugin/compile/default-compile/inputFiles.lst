@@ -1,0 +1,15 @@
+D:\Git\Git_Project\openai-code-review-initialization-v1.0\openai-code-review-sdk\src\main\java\com\ai\reviewer\sdk\types\utils\WXAccessTokenUtils.java
+D:\Git\Git_Project\openai-code-review-initialization-v1.0\openai-code-review-sdk\src\main\java\com\ai\reviewer\sdk\domain\service\impl\OpenAiCodeReviewService.java
+D:\Git\Git_Project\openai-code-review-initialization-v1.0\openai-code-review-sdk\src\main\java\com\ai\reviewer\sdk\infrastructure\git\GitCommand.java
+D:\Git\Git_Project\openai-code-review-initialization-v1.0\openai-code-review-sdk\src\main\java\com\ai\reviewer\sdk\infrastructure\openai\impl\ChatGLM.java
+D:\Git\Git_Project\openai-code-review-initialization-v1.0\openai-code-review-sdk\src\main\java\com\ai\reviewer\sdk\types\utils\RandomStringUtils.java
+D:\Git\Git_Project\openai-code-review-initialization-v1.0\openai-code-review-sdk\src\main\java\com\ai\reviewer\sdk\infrastructure\openai\IOpenAI.java
+D:\Git\Git_Project\openai-code-review-initialization-v1.0\openai-code-review-sdk\src\main\java\com\ai\reviewer\sdk\domain\model\Model.java
+D:\Git\Git_Project\openai-code-review-initialization-v1.0\openai-code-review-sdk\src\main\java\com\ai\reviewer\sdk\domain\service\AbstractOpenAiCodeReviewService.java
+D:\Git\Git_Project\openai-code-review-initialization-v1.0\openai-code-review-sdk\src\main\java\com\ai\reviewer\sdk\infrastructure\weixin\WeiXin.java
+D:\Git\Git_Project\openai-code-review-initialization-v1.0\openai-code-review-sdk\src\main\java\com\ai\reviewer\sdk\infrastructure\weixin\dto\TemplateMessageDTO.java
+D:\Git\Git_Project\openai-code-review-initialization-v1.0\openai-code-review-sdk\src\main\java\com\ai\reviewer\sdk\types\utils\BearerTokenUtils.java
+D:\Git\Git_Project\openai-code-review-initialization-v1.0\openai-code-review-sdk\src\main\java\com\ai\reviewer\sdk\infrastructure\openai\dto\ChatCompletionSyncResponseDTO.java
+D:\Git\Git_Project\openai-code-review-initialization-v1.0\openai-code-review-sdk\src\main\java\com\ai\reviewer\sdk\domain\service\IOpenAiCodeReviewService.java
+D:\Git\Git_Project\openai-code-review-initialization-v1.0\openai-code-review-sdk\src\main\java\com\ai\reviewer\sdk\infrastructure\openai\dto\ChatCompletionRequestDTO.java
+D:\Git\Git_Project\openai-code-review-initialization-v1.0\openai-code-review-sdk\src\main\java\com\ai\reviewer\sdk\OpenAiCodeReview.java

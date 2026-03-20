@@ -40,7 +40,11 @@ public class OpenAiCodeReview {
     private static String getEnv(String key) {
         String value = System.getenv(key);
         if (null == value || value.isEmpty()) {
-            throw new RuntimeException("Environment variable " + key + " is null or empty");
+            // 只有 GITHUB_TOKEN 是必须要有的，其他可以有默认值或者报错
+            if ("GITHUB_TOKEN".equals(key) || "GITHUB_REVIEW_LOG_URI".equals(key)) {
+                throw new RuntimeException("Environment variable " + key + " is null or empty");
+            }
+            return "";
         }
         return value;
     }
