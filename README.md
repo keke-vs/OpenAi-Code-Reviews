@@ -1,36 +1,55 @@
-# OpenAI Code Review - 初始化项目包 v1.0
+# 🤖 OpenAI 智能代码评审助手 (AI Code Review)
 
-## 项目说明
-本项目是从原始 `openai-code-review` 复刻并经过「私有化改造」后的版本。所有原作者相关的标识、包名、Group ID 及硬编码的业务 ID 已全部剔除，代之以标准化的占位符或新的私有化标识。
+## 🌟 这是什么？
+这是一个为你量身定制的“虚拟高级程序员”。每当你写完代码并推送到 GitHub 时，它都会自动跳出来，像导师一样仔细检查你的代码，给出评分、指出问题并提供修改建议。最后，它还会把评审结果直接发到你的微信上！
 
-## 改造内容
-1. **包名重构**：由 `plus.gaga.middleware` 统一重构为 `com.ai.reviewer`。
-2. **Maven 坐标**：`groupId` 已修改为 `com.ai.reviewer`。
-3. **标识清理**：移除了代码注释中的原作者信息、GitHub 仓库地址及个人微信号。
-4. **配置抽象**：对硬编码的微信 AppID、用户 ID 等进行了占位符处理，需在运行时通过环境变量注入。
+---
 
-## 运行环境
-- JDK 1.8+
-- Maven 3.6+
-- GitHub Actions (可选)
+## 🚀 核心功能
+1.  **自动“找茬”**：自动检测你代码中的逻辑错误、性能瓶颈和安全隐患。
+2.  **大模型调优**：对接最先进的 AI 大模型（如 ChatGLM、GPT-4 等），给出的建议既专业又通俗。
+3.  **微信即时通知**：不需要一直盯着 GitHub，手机震动一下，评审报告就送到你手里。
+4.  **云端日志归档**：所有的评审记录都会自动保存到你的专属日志仓库，方便日后复盘。
+5.  **零人工干预**：配置一次，终身受益。只要你提交代码，它就自动工作。
 
-## 快速开始
-1. **本地构建**：
-   ```bash
-   mvn clean install
-   ```
-2. **配置 Secrets**：
-   若使用 GitHub Actions，请在仓库 `Settings -> Secrets -> Actions` 中配置以下内容：
-   - `CODE_TOKEN`: GitHub Personal Access Token
-   - `CODE_REVIEW_LOG_URI`: 用于存放评审日志的仓库地址
-   - `WEIXIN_APPID`: 微信公众号 AppID
-   - `WEIXIN_SECRET`: 微信公众号 Secret
-   - `WEIXIN_TOUSER`: 接收通知的微信用户 OpenID
-   - `WEIXIN_TEMPLATE_ID`: 微信模板消息 ID
-   - `CHATGLM_APIKEYSECRET`: ChatGLM API Key
+---
 
-## 核心逻辑
-项目保持了原有的核心逻辑：
-- 自动检测 Git 提交差异。
-- 调用大模型进行代码评审。
-- 通过微信公众号发送评审结果。
+## 🛠️ 它是如何工作的？（小白版流程）
+1.  **提交代码**：你在电脑上写完代码，执行 `git push`。
+2.  **触发流水线**：GitHub Actions 监测到你的提交，自动启动运行环境。
+3.  **AI 评审**：程序会自动提取你这次修改的代码差异（Diff），发给 AI 大模型进行分析。
+4.  **生成报告**：AI 生成一份包含：代码评分、逻辑分析、优点、问题点、修改建议及优化后代码的详细报告。
+5.  **多渠道推送**：报告会被存入你的日志仓库，并同步通过微信公众号发给你。
+
+---
+
+## 📋 快速开始（如何拥有它？）
+
+### 1. 准备工作
+-   一个 GitHub 账号。
+-   一个微信公众号（测试号即可）。
+-   一个 AI 大模型的 API Key（如智谱 AI 的 ChatGLM）。
+
+### 2. 配置秘钥 (Secrets)
+在你的 GitHub 仓库 `Settings -> Secrets -> Actions` 中，添加以下“暗号”：
+-   `CODE_TOKEN`: 你的 GitHub 授权令牌（PAT）。
+-   `CODE_REVIEW_LOG_URI`: 你存放评审日志的仓库地址。
+-   `WEIXIN_APPID` & `WEIXIN_SECRET`: 微信公众号的身份标识。
+-   `WEIXIN_TOUSER`: 你的微信 OpenID（发给谁）。
+-   `WEIXIN_TEMPLATE_ID`: 微信通知模板 ID。
+-   `CHATGLM_APIKEYSECRET`: 你的 AI 大模型密钥。
+
+### 3. 触发评审
+修改代码并 `git push origin master`，然后去你的微信等着收信吧！
+
+---
+
+## 📂 项目结构
+-   `openai-code-review-sdk`: 核心“大脑”，负责跟 Git、AI 和微信打交道。
+-   `openai-code-review-test`: 测试小助手，帮你验证环境是否配置成功。
+-   `.github/workflows`: 自动化的“指挥部”，告诉 GitHub 什么时候该运行评审。
+
+---
+
+## 🤝 结语
+告别低级错误，让 AI 助你成为更优秀的开发者！如果你觉得好用，记得给项目点个 ⭐️ 哦！
